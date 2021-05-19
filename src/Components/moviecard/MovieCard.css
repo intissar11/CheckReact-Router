@@ -1,0 +1,25 @@
+.card {
+background-color: black;
+width: 23rem;
+height: 40rem;
+margin-left: 30px;
+margin: 20px;
+border-radius: 10px;
+
+}
+.imgCard{
+height: 25rem;
+width: 23rem;
+border-radius:10px;
+
+}
+.titleCard{
+color: #3da4ab;
+font-family: Pacifico, cursive;
+font-size: 20px;
+
+}
+.text{
+font-size: 13px;
+ color: white
+}
