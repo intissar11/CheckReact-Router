@@ -5,6 +5,7 @@ import MovieList from "./Components/movielist/MovieList";
 import { moviedata } from "./moviedata";
 import Filter from "./Components/filter/Filter";
 import Addmovie from "./Components/addmovie/Addmovie";
+
 function App() {
   const [favmovie, setFavmovie] = useState(moviedata);
   const [title, setTitle] = useState("");
