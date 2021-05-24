@@ -1,12 +1,15 @@
 import React from "react";
-import { Button, Form, FormControl, Nav, Navbar } from "react-bootstrap";
+import {Form, FormControl, Nav, Navbar } from "react-bootstrap";
 import ReactStars from "react-rating-stars-component";
 import "./Filter.css";
 const Filter = ({ name, filterTitle, filterRate }) => {
   return (
     <Navbar className="nav" bg="dark" variant="dark">
-      <Navbar.Brand className="titlenav" style={{color:"teal"}}>MovieApp</Navbar.Brand>
+      <Navbar.Brand className="titlenav" style={{ color: "teal" }}>
+        MovieApp
+      </Navbar.Brand>
       <Nav className="mr-auto"></Nav>
+
       <div>
         <Form inline>
           <FormControl
@@ -16,7 +19,6 @@ const Filter = ({ name, filterTitle, filterRate }) => {
             onChange={filterTitle}
             value={name}
           />
-          <Button variant="outline-info">Search</Button>
         </Form>
         <ReactStars
           count={5}

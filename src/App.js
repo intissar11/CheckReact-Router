@@ -5,9 +5,12 @@ import MovieList from "./Components/movielist/MovieList";
 import { moviedata } from "./moviedata";
 import Filter from "./Components/filter/Filter";
 import Addmovie from "./Components/addmovie/Addmovie";
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Description from "./Components/Description/Description";
+
 
 function App() {
-  const [favmovie, setFavmovie] = useState(moviedata);
+  const [movielist, setMovielist] = useState(moviedata)
   const [title, setTitle] = useState("");
   const [rate, setRate] = useState(0);
   const filterTitle = (event) => {
@@ -18,26 +21,36 @@ function App() {
     setRate(newRating);
   };
   const AddFunc = (newmovie) => {
-    setFavmovie([...favmovie, newmovie]);
+    setMovielist([...movielist, newmovie]);
   };
 
   return (
     <div className="App container">
-      <Filter
+     <Router>
+     
+     <Filter
         name={title}
         filterTitle={filterTitle}
         filterRate={ratingChanged}
       />
-      <MovieList
-        tab={favmovie.filter(
+
+      <Route path="/" exact render ={()=> <MovieList
+        movielist={movielist.filter(
           (elem) =>
             elem.title
               .trim()
               .toLowerCase()
               .includes(title.trim().toLowerCase()) && elem.rating >= rate
         )}
+        />}
       />
       <Addmovie AddFunc={AddFunc} />
+      <Route  path="/Description/:id" render={(props)=> <Description {...props} movieList={movielist} exact/>}/>
+      <Route
+    path="/"
+    
+    />
+      </Router>
     </div>
   );
 }

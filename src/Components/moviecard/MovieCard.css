@@ -18,29 +18,13 @@ font-weight: bold;
 font-size: 13px;
 color: grey;
 }
-.container {
-    overflow: hidden;
 
-  }
-  .text-content{
-    width:140%;
-    height:30%;
-    margin-left: -33px;
-    background:rgba(0,0,0,.5);
-    transform:translateY(200px);
-    transition:1s ease;
-    color:rgb(252, 246, 246);
-    padding:1rem 1.5rem;
-    text-align: left;
-    box-sizing:border-box;
-
+.footer{
+    display: inline-flex;
+    justify-content: space-between;
+}
+.btn{
+    margin-bottom: 10px;
+    margin-left: 5px;
 }
 
-.container:hover .text-content{
-    transform: translateY(0);
-    
-}
-.container:hover .text-content .text{
-    transform: translateY(0);
-   
-}
