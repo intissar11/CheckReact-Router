@@ -44,13 +44,10 @@ function App() {
         )}
         />}
       />
-      <Addmovie AddFunc={AddFunc} />
       <Route  path="/Description/:id" render={(props)=> <Description {...props} movieList={movielist} exact/>}/>
-      <Route
-    path="/"
-    
-    />
+   
       </Router>
+      <Addmovie AddFunc={AddFunc} />
     </div>
   );
 }

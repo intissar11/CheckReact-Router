@@ -1,0 +1,15 @@
+.titleCard{
+    color:white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-decoration-line: underline;
+    margin-top: -15px;
+    font-weight: bold;
+    }
+    .trailer{
+    margin-left:400px;
+    margin-top:-55px;
+    border-radius:10px;}
+    .description{
+font-family: cursive;
+font-size: 14px;    }
